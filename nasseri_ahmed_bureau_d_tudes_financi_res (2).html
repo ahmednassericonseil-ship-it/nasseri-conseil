@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASSERI AHMED | Bureau de Conseil & Études Financières</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slate: {
+                            850: '#141A24',
+                            900: '#0F131A',
+                            950: '#0A0D12'
+                        },
+                        rosegold: {
+                            DEFAULT: '#C99D8B',
+                            light: '#E5C0B3',
+                            dark: '#A67B6B',
+                            metallic: 'linear-gradient(135deg, #B88A78 0%, #E8C5B8 50%, #A37463 100%)'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Montserrat"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #D4A391 0%, #F5D3C8 35%, #C28E7D 70%, #E8C4B8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-border-glow {
+            box-shadow: 0 0 20px rgba(201, 157, 139, 0.15);
+        }
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #B88A78 0%, #DDAF9F 50%, #9E7060 100%);
+        }
+        .bg-pattern {
+            background-color: #0d1117;
+            background-image: radial-gradient(rgba(201, 157, 139, 0.08) 1px, transparent 0);
+            background-size: 32px 32px;
+        }
+        .glass-card {
+            background: rgba(20, 26, 36, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(201, 157, 139, 0.18);
+        }
+        .glass-card-hover {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .glass-card-hover:hover {
+            transform: translateY(-5px);
+            border-color: rgba(201, 157, 139, 0.45);
+            box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.5), 0 0 25px rgba(201, 157, 139, 0.12);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 font-sans antialiased bg-pattern">
+
+    <!-- Top Contact Bar -->
+    <div class="bg-slate-900/90 border-b border-rosegold/10 text-xs py-2 hidden md:block">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center space-x-6 text-slate-400">
+                <a href="tel:0699694331" class="hover:text-rosegold transition-colors flex items-center gap-2">
+                    <i class="fas fa-phone-alt text-rosegold"></i> 0699694331
+                </a>
+                <a href="mailto:ahmed.nasseri.conseil@gmail.com" class="hover:text-rosegold transition-colors flex items-center gap-2">
+                    <i class="fas fa-envelope text-rosegold"></i> ahmed.nasseri.conseil@gmail.com
+                </a>
+                <span class="flex items-center gap-2">
+                    <i class="fas fa-location-dot text-rosegold"></i> Skikda & Algérie entière
+                </span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="https://wa.me/213699694331" target="_blank" class="text-xs text-green-400 hover:text-green-300 flex items-center gap-1.5 font-medium bg-green-950/40 border border-green-800/40 px-2.5 py-0.5 rounded-full">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Direct
+                </a>
+                <span class="text-slate-500">|</span>
+                <span class="text-slate-400">Dimanche - Jeudi: 08:30 - 17:00</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-slate-950/85 backdrop-blur-md border-b border-rosegold/20">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            
+            <!-- Logo Section -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-slate-800 to-slate-900 border border-rosegold/40 flex items-center justify-center shadow-lg group-hover:border-rosegold transition-all duration-300">
+                    <span class="font-serif font-bold text-xl gold-gradient-text tracking-wider">NA</span>
+                </div>
+                <div>
+                    <span class="block font-serif text-lg font-bold tracking-widest text-white leading-tight">NASSERI AHMED</span>
+                    <span class="block text-[10px] tracking-wider text-rosegold uppercase font-medium">Conseil & Études Financières</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <div class="hidden lg:flex items-center space-x-8 text-sm uppercase tracking-wider font-medium text-slate-300">
+                <a href="#about" class="hover:text-rosegold transition-colors">À Propos</a>
+                <a href="#services" class="hover:text-rosegold transition-colors">Services</a>
+                <a href="#simulator" class="hover:text-rosegold transition-colors flex items-center gap-1.5">
+                    <i class="fas fa-calculator text-xs text-rosegold"></i> Simulateur
+                </a>
+                <a href="#process" class="hover:text-rosegold transition-colors">Méthodologie</a>
+                <a href="#contact" class="hover:text-rosegold transition-colors">Contact</a>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="hidden sm:flex items-center space-x-4">
+                <a href="#contact" class="px-5 py-2.5 text-xs uppercase tracking-widest font-semibold rounded bg-gradient-to-r from-rosegold-dark via-rosegold to-rosegold-dark text-slate-950 hover:brightness-110 transition-all shadow-md shadow-rosegold/10">
+                    Prendre RDV
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" class="lg:hidden text-slate-300 hover:text-rosegold focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-slate-900 border-b border-rosegold/20 px-6 py-4">
+            <div class="flex flex-col space-y-4 text-sm uppercase tracking-wider font-medium text-slate-300">
+                <a href="#about" class="hover:text-rosegold transition-colors py-1">À Propos</a>
+                <a href="#services" class="hover:text-rosegold transition-colors py-1">Services</a>
+                <a href="#simulator" class="hover:text-rosegold transition-colors py-1">Simulateur Financier</a>
+                <a href="#process" class="hover:text-rosegold transition-colors py-1">Méthodologie</a>
+                <a href="#contact" class="hover:text-rosegold transition-colors py-1">Contact</a>
+                <div class="pt-2 border-t border-slate-800 flex flex-col gap-3">
+                    <a href="tel:0699694331" class="text-xs text-rosegold flex items-center gap-2">
+                        <i class="fas fa-phone"></i> 0699694331
+                    </a>
+                    <a href="https://wa.me/213699694331" target="_blank" class="w-full text-center px-4 py-2 text-xs uppercase font-semibold rounded gold-gradient-bg text-slate-950">
+                        Discuter sur WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[90vh] flex items-center justify-center py-20 px-6 overflow-hidden">
+        <!-- Background Lighting FX -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-rosegold/10 blur-[140px] rounded-full pointer-events-none"></div>
+        
+        <div class="max-w-6xl mx-auto text-center relative z-10">
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card border-rosegold/30 text-rosegold text-xs uppercase tracking-widest mb-8">
+                <span class="w-2 h-2 rounded-full bg-rosegold animate-pulse"></span>
+                Cabinet d'Ingénierie & Stratégie Financière
+            </div>
+
+            <!-- Title -->
+            <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold text-white tracking-tight leading-tight mb-6">
+                Expertise Financière,<br>
+                <span class="gold-gradient-text italic font-normal">Ingénierie & Conseil</span> Stratégique
+            </h1>
+
+            <p class="max-w-2xl mx-auto text-slate-300 text-base sm:text-lg font-light leading-relaxed mb-10">
+                Accompagnement sur-mesure pour PME, investisseurs et porteurs de projets. 
+                De l'étude de faisabilité au montage financier complet, sécurisez le succès de vos investissements.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+                <a href="#contact" class="w-full sm:w-auto px-8 py-4 text-xs uppercase tracking-widest font-bold rounded gold-gradient-bg text-slate-950 hover:shadow-lg hover:shadow-rosegold/20 transition-all transform hover:-translate-y-0.5">
+                    Demander une Étude / Consulter
+                </a>
+                <a href="#simulator" class="w-full sm:w-auto px-8 py-4 text-xs uppercase tracking-widest font-bold rounded glass-card text-slate-200 hover:border-rosegold transition-all flex items-center justify-center gap-2">
+                    <i class="fas fa-calculator text-rosegold"></i> Simuler mon Projet
+                </a>
+            </div>
+
+            <!-- Key Figures / Badges -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 pt-10 border-t border-slate-800/80">
+                <div class="p-4">
+                    <p class="font-serif text-3xl font-bold gold-gradient-text">100%</p>
+                    <p class="text-xs uppercase tracking-wider text-slate-400 mt-1">Conformité aux Banques & CALPIREF</p>
+                </div>
+                <div class="p-4">
+                    <p class="font-serif text-3xl font-bold gold-gradient-text">Sur-Mesure</p>
+                    <p class="text-xs uppercase tracking-wider text-slate-400 mt-1">Business Plans Rigoureux</p>
+                </div>
+                <div class="p-4">
+                    <p class="font-serif text-3xl font-bold gold-gradient-text">SCF & Fiscal</p>
+                    <p class="text-xs uppercase tracking-wider text-slate-400 mt-1">Optimisation & Audit</p>
+                </div>
+                <div class="p-4">
+                    <p class="font-serif text-3xl font-bold gold-gradient-text">Assistance</p>
+                    <p class="text-xs uppercase tracking-wider text-slate-400 mt-1">Accompagnement de A à Z</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 bg-slate-900/50 relative border-t border-slate-800/60">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-5 relative">
+                <div class="relative z-10 rounded-2xl glass-card p-8 border-rosegold/30 text-center">
+                    <div class="w-24 h-24 mx-auto rounded-full bg-gradient-to-tr from-slate-900 to-slate-800 border-2 border-rosegold flex items-center justify-center shadow-xl mb-6">
+                        <span class="font-serif text-3xl font-bold gold-gradient-text">NA</span>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-white mb-1">NASSERI AHMED</h3>
+                    <p class="text-rosegold text-xs uppercase tracking-widest font-semibold mb-4">Consultant & Expert financier</p>
+                    <p class="text-slate-300 text-sm italic font-serif leading-relaxed">
+                        « Une étude financière rigoureuse est la clé de voûte de tout projet d'investissement pérenne. Mon objectif est de transformer vos visions en structures viables et bancables. »
+                    </p>
+                    <div class="mt-6 pt-6 border-t border-slate-800 flex justify-center space-x-4">
+                        <a href="tel:0699694331" class="w-10 h-10 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-rosegold hover:border-rosegold transition-colors">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <a href="mailto:ahmed.nasseri.conseil@gmail.com" class="w-10 h-10 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-rosegold hover:border-rosegold transition-colors">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://wa.me/213699694331" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-green-400 hover:border-green-400 transition-colors">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Decorative Gold Frame -->
+                <div class="absolute -bottom-4 -right-4 w-full h-full border border-rosegold/20 rounded-2xl -z-0 hidden sm:block"></div>
+            </div>
+
+            <div class="lg:col-span-7">
+                <span class="text-rosegold text-xs uppercase tracking-widest font-semibold">À Propos du Cabinet</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2 mb-6">
+                    Votre Partenaire Stratégique pour une Démarche Financière Maîtrisée
+                </h2>
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+                    Le bureau d'études <strong>NASSERI AHMED</strong> apporte un savoir-faire approfondi en matière d'ingénierie financière, d'évaluation d'investissements et d'analyse technico-économique.
+                </p>
+                <p class="text-slate-400 text-sm leading-relaxed mb-8">
+                    Que vous soyez un promoteur en quête de financement bancaire (ANDI, ANDSE, formule d'investissement classique ou de crédit d'exploitation), ou une entreprise établie souhaitant restructurer ses finances ou optimiser sa fiscalité, nous élaborons des dossiers d'une précision exemplaire et conformes aux exigences des organismes financiers et institutionnels.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="p-4 rounded-lg bg-slate-850 border border-slate-800">
+                        <i class="fas fa-chart-line text-rosegold text-xl mb-2"></i>
+                        <h4 class="text-white font-medium text-sm mb-1">Rigueur & Analyse</h4>
+                        <p class="text-xs text-slate-400">Des calculs prévisionnels vérifiés et adaptés au contexte économique local.</p>
+                    </div>
+                    <div class="p-4 rounded-lg bg-slate-850 border border-slate-800">
+                        <i class="fas fa-shield-alt text-rosegold text-xl mb-2"></i>
+                        <h4 class="text-white font-medium text-sm mb-1">Confidentialité Absolue</h4>
+                        <p class="text-xs text-slate-400">Vos données financières et projets stratégiques sont traités dans un cadre ultra sécurisé.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 px-6 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-rosegold text-xs uppercase tracking-widest font-semibold">Domaines d'Expertise</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2 mb-4">
+                    Nos Prestations sur-mesure
+                </h2>
+                <div class="w-16 h-0.5 gold-gradient-bg mx-auto mb-4"></div>
+                <p class="text-slate-400 text-sm">
+                    Une gamme complète de solutions financières et de conseil en gestion stratégique pour soutenir la croissance de votre entreprise.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1 -->
+                <div class="glass-card glass-card-hover p-8 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-slate-800 border border-rosegold/30 flex items-center justify-center text-rosegold text-2xl mb-6">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white mb-3">Études de Faisabilité & Business Plans</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Élaboration de dossiers technico-économiques complets pour banques et organismes d'investissement. Simulation du TRI, VAN, et Seuil de Rentabilité.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800 pt-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-rosegold"></i> Plans de financement pluriannuels</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-rosegold"></i> Analyse du marché et prévisionnel</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="glass-card glass-card-hover p-8 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-slate-800 border border-rosegold/30 flex items-center justify-center text-rosegold text-2xl mb-6">
+                            <i class="fas fa-landmark"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white mb-3">Ingénierie Financière & Montage bancaire</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Accompagnement pour l'obtention de crédits d'investissement ou d'exploitation. Structuration optimale du capital et de la dette.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800 pt-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-rosegold"></i> Négoce avec institutions bancaires</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-rosegold"></i> Montage de dossiers de subvention/exonération</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glass-card glass-card-hover p-8 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-slate-800 border border-rosegold/30 flex items-center justify-center text-rosegold text-2xl mb-6">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white mb-3">Audit SCF & Diagnostic Financier</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Analyse approfondie des états financiers selon le Système Comptable Financier (SCF). Évaluation de la santé financière et ratios clés.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800 pt-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-rosegold"></i> Audit du Fonds de Roulement (BFR)</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-rosegold"></i> Recommandations de gestion de trésorerie</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="glass-card glass-card-hover p-8 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-slate-800 border border-rosegold/30 flex items-center justify-center text-rosegold text-2xl mb-6">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white mb-3">Optimisation Fiscale & Conseil Légale</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Assistance pour la maîtrise du risque fiscal et le choix des options de régimes d'imposition les plus avantageuses pour votre société.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800 pt-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-rosegold"></i> Audit d'assujettissement & taxes</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-rosegold"></i> Conseil sur les cadres d'incitation fiscaux</li>
+                    </ul>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="glass-card glass-card-hover p-8 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-slate-800 border border-rosegold/30 flex items-center justify-center text-rosegold text-2xl mb-6">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white mb-3">Stratégie d'Entreprise & Restructuration</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Planification stratégique pour les entreprises en phase d'expansion, de consolidation ou en difficulté de gestion financière.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800 pt-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-rosegold"></i> Tableaux de bord de gestion</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-rosegold"></i> Optimisation des coûts opérationnels</li>
+                    </ul>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="glass-card glass-card-hover p-8 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-slate-800 border border-rosegold/30 flex items-center justify-center text-rosegold text-2xl mb-6">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white mb-3">Accompagnement d'Investissement</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Assistance continue lors des réunions d'orientation stratégique, revues financières périodiques et soutenances de projets.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800 pt-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-rosegold"></i> Suivi post-obtention de crédit</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-rosegold"></i> Évaluation de valeur d'entreprise</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Simulator Section -->
+    <section id="simulator" class="py-20 px-6 bg-slate-900/80 border-t border-b border-slate-800">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-rosegold text-xs uppercase tracking-widest font-semibold">Outil Interactif</span>
+                <h2 class="font-serif text-3xl font-bold text-white mt-1">Simulateur de Mensualité de Crédit</h2>
+                <p class="text-slate-400 text-sm mt-2">Estimez rapidement le coût de remboursement bancaire pour votre projet d'investissement.</p>
+            </div>
+
+            <div class="glass-card rounded-2xl p-6 sm:p-10 border-rosegold/30">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Controls -->
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between text-sm mb-2">
+                                <label class="text-slate-300 font-medium">Montant du Crédit (DZD)</label>
+                                <span id="amount-val" class="text-rosegold font-bold">10 000 000 DA</span>
+                            </div>
+                            <input type="range" id="amount" min="1000000" max="200000000" step="1000000" value="10000000" 
+                                   class="w-full accent-rosegold h-2 bg-slate-800 rounded-lg cursor-pointer">
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-sm mb-2">
+                                <label class="text-slate-300 font-medium">Durée de Remboursement (Années)</label>
+                                <span id="years-val" class="text-rosegold font-bold">7 Ans</span>
+                            </div>
+                            <input type="range" id="years" min="1" max="15" step="1" value="7" 
+                                   class="w-full accent-rosegold h-2 bg-slate-800 rounded-lg cursor-pointer">
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-sm mb-2">
+                                <label class="text-slate-300 font-medium">Taux d'Intérêt Estimé (%)</label>
+                                <span id="rate-val" class="text-rosegold font-bold">5.5 %</span>
+                            </div>
+                            <input type="range" id="rate" min="1" max="12" step="0.25" value="5.5" 
+                                   class="w-full accent-rosegold h-2 bg-slate-800 rounded-lg cursor-pointer">
+                        </div>
+                    </div>
+
+                    <!-- Results Display -->
+                    <div class="bg-slate-950/90 rounded-xl p-6 border border-slate-800 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs text-slate-400 uppercase tracking-wider block mb-1">Estimation des Règlements</span>
+                            <div class="text-3xl sm:text-4xl font-serif font-bold gold-gradient-text mb-4" id="monthly-payment">
+                                0 DA / mois
+                            </div>
+                            
+                            <div class="space-y-3 pt-4 border-t border-slate-800 text-sm">
+                                <div class="flex justify-between text-slate-300">
+                                    <span>Montant Total Remboursé :</span>
+                                    <span id="total-payment" class="font-semibold text-white">0 DA</span>
+                                </div>
+                                <div class="flex justify-between text-slate-300">
+                                    <span>Total des Intérêts Est. :</span>
+                                    <span id="total-interest" class="font-semibold text-rosegold">0 DA</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-slate-800 text-center">
+                            <p class="text-xs text-slate-500 mb-3">Chiffres donnés à titre indicatif sous réserve d'analyse approfondie du plan de charge.</p>
+                            <a href="#contact" onclick="fillSubjectFromCalc()" class="inline-block w-full py-2.5 px-4 text-xs font-bold uppercase tracking-wider rounded gold-gradient-bg text-slate-950">
+                                Confier mon étude au Cabinet
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology / Process -->
+    <section id="process" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-rosegold text-xs uppercase tracking-widest font-semibold">Notre Approche</span>
+                <h2 class="font-serif text-3xl font-bold text-white mt-1">Un Accompagnement Rigoureux</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="glass-card p-6 rounded-xl border-slate-800 relative">
+                    <span class="text-4xl font-serif font-bold text-rosegold/30 block mb-4">01</span>
+                    <h3 class="text-white font-serif font-semibold text-lg mb-2">Prise de Contact & Cadrage</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Écoute attentive de vos objectifs, examen préliminaire des documents comptables et validation de la viabilité initiale du projet.
+                    </p>
+                </div>
+
+                <div class="glass-card p-6 rounded-xl border-slate-800 relative">
+                    <span class="text-4xl font-serif font-bold text-rosegold/30 block mb-4">02</span>
+                    <h3 class="text-white font-serif font-semibold text-lg mb-2">Collecte & Analyse des Données</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Étude sectorielle, collecte des hypothèses d'investissement, évaluation du BFR et chiffrage des prévisions d'exploitation.
+                    </p>
+                </div>
+
+                <div class="glass-card p-6 rounded-xl border-slate-800 relative">
+                    <span class="text-4xl font-serif font-bold text-rosegold/30 block mb-4">03</span>
+                    <h3 class="text-white font-serif font-semibold text-lg mb-2">Modélisation Financière</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Rédaction du Business Plan exhaustif : comptes de résultat prévisionnels, tableaux de trésorerie et ratios d'analyse financière.
+                    </p>
+                </div>
+
+                <div class="glass-card p-6 rounded-xl border-slate-800 relative">
+                    <span class="text-4xl font-serif font-bold text-rosegold/30 block mb-4">04</span>
+                    <h3 class="text-white font-serif font-semibold text-lg mb-2">Restitution & Suivi</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Présentation du rapport final, conseils stratégiques de négociation bancaire et réajustements sur demande.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Booking Section -->
+    <section id="contact" class="py-20 px-6 bg-slate-900/90 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Direct Info -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <span class="text-rosegold text-xs uppercase tracking-widest font-semibold">Prendre Contact</span>
+                        <h2 class="font-serif text-3xl font-bold text-white mt-1 mb-4">Échangeons sur Votre Projet</h2>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Bénéficiez d'une première consultation pour analyser la faisabilité et les besoins en ingénierie de votre dossier.
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        
+                        <!-- Phone Item -->
+                        <a href="tel:0699694331" class="flex items-start gap-4 p-4 rounded-xl bg-slate-850 border border-slate-800 hover:border-rosegold/40 transition-colors group">
+                            <div class="w-12 h-12 rounded-lg bg-slate-800 border border-rosegold/30 flex items-center justify-center text-rosegold text-xl group-hover:scale-105 transition-transform">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-400 uppercase font-medium block">Téléphone Direct</span>
+                                <span class="text-lg font-bold text-white group-hover:text-rosegold transition-colors">0699694331</span>
+                                <span class="text-xs text-slate-500 block">Joignable du Dimanche au Jeudi</span>
+                            </div>
+                        </a>
+
+                        <!-- Email Item -->
+                        <a href="mailto:ahmed.nasseri.conseil@gmail.com" class="flex items-start gap-4 p-4 rounded-xl bg-slate-850 border border-slate-800 hover:border-rosegold/40 transition-colors group">
+                            <div class="w-12 h-12 rounded-lg bg-slate-800 border border-rosegold/30 flex items-center justify-center text-rosegold text-xl group-hover:scale-105 transition-transform">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-400 uppercase font-medium block">Adresse E-mail</span>
+                                <span class="text-sm font-semibold text-white group-hover:text-rosegold transition-colors break-all">ahmed.nasseri.conseil@gmail.com</span>
+                                <span class="text-xs text-slate-500 block">Réponse sous 24 à 48 heures</span>
+                            </div>
+                        </a>
+
+                        <!-- WhatsApp Direct Action -->
+                        <a href="https://wa.me/213699694331" target="_blank" class="flex items-center justify-between p-4 rounded-xl bg-gradient-to-r from-green-950/60 to-slate-900 border border-green-800/50 hover:border-green-500 transition-colors">
+                            <div class="flex items-center gap-3">
+                                <i class="fab fa-whatsapp text-2xl text-green-400"></i>
+                                <div>
+                                    <span class="text-sm font-semibold text-white block">Message Instantané WhatsApp</span>
+                                    <span class="text-xs text-green-300">Contact rapide & envoi de documents</span>
+                                </div>
+                            </div>
+                            <i class="fas fa-chevron-right text-xs text-green-400"></i>
+                        </a>
+
+                        <!-- Office Location -->
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-850 border border-slate-800">
+                            <div class="w-12 h-12 rounded-lg bg-slate-800 border border-rosegold/30 flex items-center justify-center text-rosegold text-xl">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-400 uppercase font-medium block">Localisation du Bureau</span>
+                                <span class="text-sm font-semibold text-white">Skikda, Algérie</span>
+                                <span class="text-xs text-slate-400 block">Interventions & rendez-vous sur tout le territoire national</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Consultation Form -->
+                <div class="lg:col-span-7">
+                    <div class="glass-card p-8 rounded-2xl border-rosegold/30">
+                        <h3 class="font-serif text-2xl font-bold text-white mb-2">Demande d'Étude ou Rendez-vous</h3>
+                        <p class="text-xs text-slate-400 mb-6">Remplissez le formulaire ci-dessous pour présenter sommairement votre projet.</p>
+
+                        <form id="appointment-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs uppercase font-medium text-slate-300 mb-1">Nom complet *</label>
+                                    <input type="text" required placeholder="ex. Karim Benali" 
+                                           class="w-full bg-slate-950 border border-slate-800 rounded px-4 py-2.5 text-sm text-white focus:outline-none focus:border-rosegold">
+                                </div>
+                                <div>
+                                    <label class="block text-xs uppercase font-medium text-slate-300 mb-1">Téléphone *</label>
+                                    <input type="tel" required placeholder="06XXXXXXXX" 
+                                           class="w-full bg-slate-950 border border-slate-800 rounded px-4 py-2.5 text-sm text-white focus:outline-none focus:border-rosegold">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs uppercase font-medium text-slate-300 mb-1">Adresse E-mail</label>
+                                    <input type="email" placeholder="votre.email@exemple.com" 
+                                           class="w-full bg-slate-950 border border-slate-800 rounded px-4 py-2.5 text-sm text-white focus:outline-none focus:border-rosegold">
+                                </div>
+                                <div>
+                                    <label class="block text-xs uppercase font-medium text-slate-300 mb-1">Service Souhaité</label>
+                                    <select id="service-select" class="w-full bg-slate-950 border border-slate-800 rounded px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-rosegold">
+                                        <option>Étude de Faisabilité & Business Plan</option>
+                                        <option>Montage de Dossier de Crédit Bancaire</option>
+                                        <option>Audit Financier & Diagnostic SCF</option>
+                                        <option>Optimisation Fiscale</option>
+                                        <option>Conseil en Gestion & Stratégie</option>
+                                        <option>Autre prestation</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs uppercase font-medium text-slate-300 mb-1">Détails de votre projet / Message</label>
+                                <textarea id="message-text" rows="4" placeholder="Décrivez succinctement la nature de votre projet, le secteur d'activité, ou le montant d'investissement envisagé..." 
+                                          class="w-full bg-slate-950 border border-slate-800 rounded px-4 py-2.5 text-sm text-white focus:outline-none focus:border-rosegold"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-3.5 px-6 rounded font-bold text-xs uppercase tracking-widest gold-gradient-bg text-slate-950 hover:brightness-110 transition-all shadow-lg">
+                                Transmettre la Demande
+                            </button>
+                        </form>
+
+                        <div id="form-success" class="hidden mt-4 p-4 rounded bg-green-950/80 border border-green-700 text-green-200 text-xs text-center">
+                            <i class="fas fa-check-circle text-lg block mb-1"></i>
+                            Votre message a été bien transmis. M. NASSERI AHMED vous recontactera sous peu.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-12 px-6 text-xs text-slate-400">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded bg-slate-900 border border-rosegold/40 flex items-center justify-center">
+                    <span class="font-serif font-bold text-sm gold-gradient-text">NA</span>
+                </div>
+                <div>
+                    <span class="block font-serif font-semibold text-white tracking-wider">NASSERI AHMED</span>
+                    <span class="block text-[10px] text-slate-500">Bureau d'Études & Conseil Financier</span>
+                </div>
+            </div>
+
+            <div class="text-center md:text-right">
+                <p>&copy; <span id="year"></span> NASSERI AHMED. Tous droits réservés.</p>
+                <p class="text-[11px] text-slate-500 mt-1">
+                    Skikda, Algérie | Tél: <a href="tel:0699694331" class="hover:text-rosegold">0699694331</a> | Email: <a href="mailto:ahmed.nasseri.conseil@gmail.com" class="hover:text-rosegold">ahmed.nasseri.conseil@gmail.com</a>
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Set copyright year dynamically
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Calculator Logic
+        const amountInput = document.getElementById('amount');
+        const yearsInput = document.getElementById('years');
+        const rateInput = document.getElementById('rate');
+
+        const amountVal = document.getElementById('amount-val');
+        const yearsVal = document.getElementById('years-val');
+        const rateVal = document.getElementById('rate-val');
+
+        const monthlyPaymentEl = document.getElementById('monthly-payment');
+        const totalPaymentEl = document.getElementById('total-payment');
+        const totalInterestEl = document.getElementById('total-interest');
+
+        function formatDZD(val) {
+            return new Intl.NumberFormat('fr-DZ', { maximumFractionDigits: 0 }).format(val) + ' DA';
+        }
+
+        function calculateLoan() {
+            const P = parseFloat(amountInput.value);
+            const years = parseInt(yearsInput.value);
+            const annualRate = parseFloat(rateInput.value) / 100;
+
+            amountVal.textContent = formatDZD(P);
+            yearsVal.textContent = years + (years > 1 ? ' Ans' : ' An');
+            rateVal.textContent = rateInput.value + ' %';
+
+            const r = annualRate / 12; // Monthly interest rate
+            const n = years * 12;      // Total payments count
+
+            let monthly = 0;
+            if (r === 0) {
+                monthly = P / n;
+            } else {
+                monthly = (P * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+            }
+
+            const totalPay = monthly * n;
+            const totalInt = totalPay - P;
+
+            monthlyPaymentEl.textContent = formatDZD(monthly) + ' / mois';
+            totalPaymentEl.textContent = formatDZD(totalPay);
+            totalInterestEl.textContent = formatDZD(totalInt);
+        }
+
+        amountInput.addEventListener('input', calculateLoan);
+        yearsInput.addEventListener('input', calculateLoan);
+        rateInput.addEventListener('input', calculateLoan);
+
+        // Initial Calculation Run
+        calculateLoan();
+
+        function fillSubjectFromCalc() {
+            const P = formatDZD(amountInput.value);
+            const Y = yearsInput.value;
+            const msgArea = document.getElementById('message-text');
+            msgArea.value = `Bonjour M. NASSERI AHMED,\n\nJe souhaiterais vous consulter concernant une étude de projet nécessitant un financement d'environ ${P} sur une durée de ${Y} ans.\n\nMerci de me recontacter.`;
+        }
+
+        // Handle Form Submission
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const successBox = document.getElementById('form-success');
+            const form = document.getElementById('appointment-form');
+            
+            // Show fake sending feedback
+            successBox.classList.remove('hidden');
+            form.reset();
+
+            setTimeout(() => {
+                successBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 100);
+        }
+    </script>
+</body>
+</html>
